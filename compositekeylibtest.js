@@ -87,9 +87,9 @@ console.log(".......Spending from second address  ........");
 var tx1 = "fdb768004672c2f344db52b776ca0b6457082b8d5a20564bb420dd92883f4494";
 var code = "hello"
 var indextospend = 0;
-var sequence = 141155;
+var sequence = 4294967294;
 var outscriptPubKey = toscriptPubKey;
-var amount = 141515;
+var amount = 80000;
 var tx = compositekeylib.getTransactionForunlockStrCode (code,  uidpubKey, tx1, indextospend, sequence, outscriptPubKey, amount);
 
 console.log("transaction to withdraw from string code address =\n"+tx.toHex());
