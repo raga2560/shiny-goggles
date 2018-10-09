@@ -22,7 +22,8 @@ var onepubKey = tmpKeypair.getPublicKeyBuffer();
 
 var uidpubKey = uidkeypair.getPublicKeyBuffer();
 
-var addresstosend = '2MtmgQv5SgAUJHCVnVTT52EJrZCegVYTYiv';
+// This is the address of http://bitcoinfaucet.uo1.net/ to return testnet bitcoins
+var addresstosend = '2Mso8V2XzMK2aC9Woqbgn8jLyQ2t1ozPqnE';
 
 var toscriptPubKey =  bitcoin.address.toOutputScript(addresstosend, bitcoin.networks.testnet);
 
@@ -83,7 +84,7 @@ console.log("transaction to withdraw from buffer code address =\n"+tx.toHex());
 console.log(".......Spending from second address  ........");
 
 // Example to unlock using string code address
-var tx1 = "52a6d4903cd534b1902fdbe3073b5c983a2f59a5d48dff6211b39fdf5b1bac02";
+var tx1 = "fdb768004672c2f344db52b776ca0b6457082b8d5a20564bb420dd92883f4494";
 var code = "hello"
 var indextospend = 0;
 var sequence = 141155;
