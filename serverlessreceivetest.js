@@ -62,7 +62,8 @@ console.log("testaddress="+testaddress);
 var address = received.address; 
 
 var txpromise = serverless.compReceive1toManyFund(creatorstub, uidkey, activeaddr);
- txpromise.then(function(tx) {
+ txpromise.then(function(obj) {
+  var tx = obj.data;
   if(tx != 0)
     console.log(tx.toHex());
   else {  
@@ -70,7 +71,7 @@ var txpromise = serverless.compReceive1toManyFund(creatorstub, uidkey, activeadd
    }
  }).catch (function(error){
 
-  console.log(error);
+  console.log(error.reason);
 });;
 
 

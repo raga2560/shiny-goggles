@@ -37,11 +37,12 @@ var address = serverless.doc1Upload(creatorstub, uidkey, serverlesstype );
 
 var amount = 2000;
 var txpromise = serverless.regularSendingFund(serverlesstype, amount, address, activatingkeypair); // -> popup for partner to send money, amount
- txpromise.then(function(tx) {
+ txpromise.then(function(obj) {
+  var tx = obj.data;
   console.log(tx.toHex());
-  serverless.sendtx(tx).then(function(tx1) {
+  serverless.sendtx(tx).then(function(obj1) {
 
-  console.log("sending=", JSON.stringify(tx1));
+  console.log("sending=", JSON.stringify(obj1.data));
  }).catch (function(error){
   console.log(error);
  });
